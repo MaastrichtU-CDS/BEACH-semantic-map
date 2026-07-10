@@ -2,7 +2,7 @@ name: Deploy Hugo site to Pages
 
 on:
   push:
-    branches: [ "main", "dev/misc/hugo-codebook" ]
+    branches: [ "main" ]
   workflow_dispatch:
   schedule:
     - cron: "0 0 1 */3 *"

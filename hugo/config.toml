@@ -1,6 +1,6 @@
-baseURL = "https://strongaya.github.io/AYA-cancer-data-semantic-map/"
+baseURL = "https://maastrichtu-cds.github.io/BEACH-semantic-map/"
 theme = "hugo-book"
-title = "STRONG AYA Knowledge Representation"
+title = "BEACH Knowledge Representation"
 enableGitInfo = true
 disablePathToLower = true
 
@@ -13,26 +13,21 @@ startLevel = 1
 
 [menu]
 [[menu.after]]
-name = "About STRONG AYA"
-url = "https://strongaya.eu"
+name = "About BEACH"
+url = "https://clinicaldatascience.nl"
 weight = 10
 
 [[menu.after]]
-name = "STRONG AYA GitHub"
-url = "https://github.com/STRONGAYA"
+name = "BEACH GitHub"
+url = "https://github.com/MaastrichtU-CDS/BEACH-semantic-map"
 weight = 20
-
-[[menu.after]]
-name = "Associated scientific publication"
-url = "https://doi.org/10.1200/CCI-25-00177"
-weight = 40
 
 [params]
 BookTheme = 'auto'
 BookToC = false
 BookFavicon = 'favicon.ico'
-BookSection = 'AYA-cancer-data-semantic-map'
+BookSection = 'BEACH-20K-NSCLC-data-semantic-map'
 BookDateFormat = 'January 2, 2006'
 
 # Used for 'Last Modified' and 'Edit this page' links.
-BookRepo = 'https://github.com/STRONGAYA/AYA-cancer-data-semantic-map'
+BookRepo = 'https://github.com/MaastrichtU-CDS/BEACH-semantic-map'
