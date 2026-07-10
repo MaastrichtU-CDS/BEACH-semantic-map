@@ -1,0 +1,396 @@
+{
+  "@context": {
+    "@vocab": "https://github.com/MaastrichtU-CDS/Flyover/",
+    "sio": "http://semanticscience.org/resource/",
+    "ncit": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#",
+    "mesh": "http://id.nlm.nih.gov/mesh/",
+    "roo": "http://www.cancerdata.org/roo/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "schema/",
+    "mapping": "mapping/"
+  },
+  "@id": "mapping:beach-20k-nsclc",
+  "@type": "mapping:DataMapping",
+  "name": "Beach_20K_NSCLC_Mapping",
+  "description": "Semantic mapping for Beach 20K NSCLC dataset",
+  "version": "1.0.0",
+  "created": "2026-07-10",
+  "endpoint": "",
+  "schema": {
+    "@id": "schema:beach-20k-nsclc/v1",
+    "@type": "schema:SemanticSchema",
+    "name": "Beach 20K NSCLC Semantic Schema",
+    "version": "1.0.0",
+    "description": "Semantic schema for Beach 20K NSCLC data harmonisation",
+    "prefixes": {
+      "mesh": "http://id.nlm.nih.gov/mesh/",
+      "sio": "http://semanticscience.org/resource/",
+      "ncit": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#",
+      "roo": "http://www.cancerdata.org/roo/"
+    },
+    "variables": {
+      "id": {
+        "@id": "schema:variable/id",
+        "@type": "schema:IdentifierVariable",
+        "dataType": "identifier",
+        "predicate": "sio:SIO_000008",
+        "class": "ncit:C25364",
+        "schemaReconstruction": [
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "sio:SIO_000235",
+            "class": "mesh:C18772",
+            "classLabel": "personClass",
+            "aestheticLabel": "Person"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "roo:P100029",
+            "class": "ncit:C3262",
+            "classLabel": "conditionClass",
+            "aestheticLabel": "Condition"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "placement": "after",
+            "predicate": "sio:SIO_000253",
+            "class": "ncit:C142529",
+            "classLabel": "observationClass",
+            "aestheticLabel": "Observation"
+          }
+        ]
+      },
+      "disease": {
+        "@id": "schema:variable/Disease",
+        "@type": "schema:CategoricalVariable",
+        "dataType": "categorical",
+        "predicate": "sio:SIO_000008",
+        "class": "ncit:C2926",
+        "schemaReconstruction": [
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "sio:SIO_000235",
+            "class": "mesh:C18772",
+            "classLabel": "personClass",
+            "aestheticLabel": "Person"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "roo:P100029",
+            "class": "ncit:C3262",
+            "classLabel": "conditionClass",
+            "aestheticLabel": "Condition"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "placement": "after",
+            "predicate": "sio:SIO_000253",
+            "class": "ncit:C142529",
+            "classLabel": "observationClass",
+            "aestheticLabel": "Observation"
+          }
+        ]
+      },
+      "t": {
+        "@id": "schema:variable/t",
+        "@type": "schema:CategoricalVariable",
+        "dataType": "categorical",
+        "predicate": "sio:SIO_000008",
+        "class": "ncit:C48885",
+        "schemaReconstruction": [
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "sio:SIO_000235",
+            "class": "mesh:C18772",
+            "classLabel": "personClass",
+            "aestheticLabel": "Person"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "roo:P100029",
+            "class": "ncit:C3262",
+            "classLabel": "conditionClass",
+            "aestheticLabel": "Condition"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "placement": "after",
+            "predicate": "sio:SIO_000253",
+            "class": "ncit:C142529",
+            "classLabel": "observationClass",
+            "aestheticLabel": "Observation"
+          }
+        ],
+        "valueMapping": {
+          "terms": {
+            "Tx": { "targetClass": "ncit:C48737" },
+            "Tis": { "targetClass": "ncit:C48738" },
+            "T0": { "targetClass": "ncit:C48719" },
+            "T1": { "targetClass": "ncit:C48720" },
+            "T1mi": { "targetClass": "ncit:C95805" },
+            "T1a": { "targetClass": "ncit:C48721" },
+            "T1b": { "targetClass": "ncit:C48722" },
+            "T1c": { "targetClass": "ncit:C48723" },
+            "T2": { "targetClass": "ncit:C48724" },
+            "T2a": { "targetClass": "ncit:C48725" },
+            "T2b": { "targetClass": "ncit:C48726" },
+            "T3": { "targetClass": "ncit:C48728" },
+            "T4": { "targetClass": "ncit:C48732" },
+            "missing_or_unspecified": { "targetClass": "ncit:C54031" }
+          }
+        }
+      },
+      "n": {
+        "@id": "schema:variable/n",
+        "@type": "schema:CategoricalVariable",
+        "dataType": "categorical",
+        "predicate": "sio:SIO_000008",
+        "class": "ncit:C48884",
+        "schemaReconstruction": [
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "sio:SIO_000235",
+            "class": "mesh:C18772",
+            "classLabel": "personClass",
+            "aestheticLabel": "Person"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "roo:P100029",
+            "class": "ncit:C3262",
+            "classLabel": "conditionClass",
+            "aestheticLabel": "Condition"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "placement": "after",
+            "predicate": "sio:SIO_000253",
+            "class": "ncit:C142529",
+            "classLabel": "observationClass",
+            "aestheticLabel": "Observation"
+          }
+        ],
+        "valueMapping": {
+          "terms": {
+            "Nx": { "targetClass": "ncit:C48718" },
+            "N0": { "targetClass": "ncit:C48705" },
+            "N1": { "targetClass": "ncit:C48706" },
+            "N2": { "targetClass": "ncit:C48786" },
+            "N3": { "targetClass": "ncit:C48714" },
+            "missing_or_unspecified": { "targetClass": "ncit:C54031" }
+          }
+        }
+      },
+      "m": {
+        "@id": "schema:variable/m",
+        "@type": "schema:CategoricalVariable",
+        "dataType": "categorical",
+        "predicate": "sio:SIO_000008",
+        "class": "ncit:C48883",
+        "schemaReconstruction": [
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "sio:SIO_000235",
+            "class": "mesh:C18772",
+            "classLabel": "personClass",
+            "aestheticLabel": "Person"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "roo:P100029",
+            "class": "ncit:C3262",
+            "classLabel": "conditionClass",
+            "aestheticLabel": "Condition"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "placement": "after",
+            "predicate": "sio:SIO_000253",
+            "class": "ncit:C142529",
+            "classLabel": "observationClass",
+            "aestheticLabel": "Observation"
+          }
+        ],
+        "valueMapping": {
+          "terms": {
+            "Mx": { "targetClass": "ncit:C48704" },
+            "M0": { "targetClass": "ncit:C48699" },
+            "M1": { "targetClass": "ncit:C48700" },
+            "M1a": { "targetClass": "ncit:C48701" },
+            "M1b": { "targetClass": "ncit:C48702" },
+            "M1c": { "targetClass": "ncit:C48703" },
+            "missing_or_unspecified": { "targetClass": "ncit:C54031" }
+          }
+        }
+      },
+      "stage": {
+        "@id": "schema:variable/stage",
+        "@type": "schema:CategoricalVariable",
+        "dataType": "categorical",
+        "predicate": "sio:SIO_000008",
+        "class": "ncit:C28108",
+        "schemaReconstruction": [
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "sio:SIO_000235",
+            "class": "mesh:C18772",
+            "classLabel": "personClass",
+            "aestheticLabel": "Person"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "roo:P100029",
+            "class": "ncit:C3262",
+            "classLabel": "conditionClass",
+            "aestheticLabel": "Condition"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "placement": "after",
+            "predicate": "sio:SIO_000253",
+            "class": "ncit:C142529",
+            "classLabel": "observationClass",
+            "aestheticLabel": "Observation"
+          }
+        ],
+        "valueMapping": {
+          "terms": {
+            "0": { "targetClass": "ncit:C28051" },
+            "Occult": { "targetClass": "ncit:C141461" },
+            "I": { "targetClass": "ncit:C27966" },
+            "IA": { "targetClass": "ncit:C27975" },
+            "IA1": { "targetClass": "ncit:C27983" },
+            "IA2": { "targetClass": "ncit:C27984" },
+            "IA3": { "targetClass": "ncit:C136485" },
+            "IB": { "targetClass": "ncit:C27976" },
+            "II": { "targetClass": "ncit:C28054" },
+            "IIA": { "targetClass": "ncit:C27967" },
+            "IIB": { "targetClass": "ncit:C27968" },
+            "III": { "targetClass": "ncit:C27970" },
+            "IIIA": { "targetClass": "ncit:C27977" },
+            "IIIB": { "targetClass": "ncit:C27978" },
+            "IIIC": { "targetClass": "ncit:C27982" },
+            "IV": { "targetClass": "ncit:C27971" },
+            "IVA": { "targetClass": "ncit:C27979" },
+            "IVB": { "targetClass": "ncit:C27980" },
+            "missing_or_unspecified": { "targetClass": "ncit:C54031" }
+          }
+        }
+      },
+      "date_of_diagnosis": {
+        "@id": "schema:variable/date_of_diagnosis",
+        "@type": "schema:ContinuousVariable",
+        "dataType": "continuous",
+        "predicate": "sio:SIO_000008",
+        "class": "ncit:C25164",
+        "schemaReconstruction": [
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "sio:SIO_000235",
+            "class": "mesh:C18772",
+            "classLabel": "personClass",
+            "aestheticLabel": "Person"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "roo:P100029",
+            "class": "ncit:C3262",
+            "classLabel": "conditionClass",
+            "aestheticLabel": "Condition"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "placement": "after",
+            "predicate": "sio:SIO_000253",
+            "class": "ncit:C142529",
+            "classLabel": "observationClass",
+            "aestheticLabel": "Observation"
+          },
+          {
+            "@type": "schema:UnitNode",
+            "predicate": "sio:SIO_000221",
+            "class": "ncit:C25301",
+            "nodeLabel": "date",
+            "aestheticLabel": "Date"
+          }
+        ]
+      },
+      "date_of_fu": {
+        "@id": "schema:variable/date_of_fu",
+        "@type": "schema:ContinuousVariable",
+        "dataType": "continuous",
+        "predicate": "sio:SIO_000008",
+        "class": "ncit:C25164",
+        "schemaReconstruction": [
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "sio:SIO_000235",
+            "class": "mesh:C18772",
+            "classLabel": "personClass",
+            "aestheticLabel": "Person"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "roo:P100029",
+            "class": "ncit:C3262",
+            "classLabel": "conditionClass",
+            "aestheticLabel": "Condition"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "placement": "after",
+            "predicate": "sio:SIO_000253",
+            "class": "ncit:C142529",
+            "classLabel": "observationClass",
+            "aestheticLabel": "Observation"
+          },
+          {
+            "@type": "schema:UnitNode",
+            "predicate": "sio:SIO_000221",
+            "class": "ncit:C25301",
+            "nodeLabel": "date",
+            "aestheticLabel": "Date"
+          }
+        ]
+      },
+      "vital_status": {
+        "@id": "schema:variable/vital_status",
+        "@type": "schema:CategoricalVariable",
+        "dataType": "categorical",
+        "predicate": "sio:SIO_000008",
+        "class": "ncit:C25717",
+        "schemaReconstruction": [
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "sio:SIO_000235",
+            "class": "mesh:C18772",
+            "classLabel": "personClass",
+            "aestheticLabel": "Person"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "predicate": "roo:P100029",
+            "class": "ncit:C3262",
+            "classLabel": "conditionClass",
+            "aestheticLabel": "Condition"
+          },
+          {
+            "@type": "schema:ClassNode",
+            "placement": "after",
+            "predicate": "sio:SIO_000253",
+            "class": "ncit:C142529",
+            "classLabel": "observationClass",
+            "aestheticLabel": "Observation"
+          }
+        ],
+        "valueMapping": {
+          "terms": {
+            "dead": { "targetClass": "ncit:C28554" },
+            "alive": { "targetClass": "ncit:C37987" },
+            "missing_or_unspecified": { "targetClass": "ncit:C54031" }
+          }
+        }
+      }
+    }
+  }
+}

@@ -12,17 +12,17 @@ if (!apiKey) {
 const uppercaseFolders = ['EORTC', 'HADS'];
 
 // Load the JSON-LD data
-const data = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'AYA_cancer_schema.jsonld'), 'utf8'));
+const data = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'BEACH_mapping_template.jsonld'), 'utf8'));
 
 const variableInfo = data.schema.variables;
 
 // Initialize the base semantic mapping directory and content
-const baseDir = path.join(__dirname, 'content', 'AYA-cancer-data-semantic-map', 'Semantic Mapping');
+const baseDir = path.join(__dirname, 'content', 'BEACH-20K-NSCLC-data-semantic-map', 'Semantic Mapping');
 if (!fs.existsSync(baseDir)) {
     fs.mkdirSync(baseDir, {recursive: true});
 
     // Copy the existing _index.md content
-    const sourceIndexPath = path.join(__dirname, 'content', 'AYA-cancer-data-semantic-map', '_index.md');
+    const sourceIndexPath = path.join(__dirname, 'content', 'BEACH-20K-NSCLC-data-semantic-map', '_index.md');
     if (fs.existsSync(sourceIndexPath)) {
         const indexContent = fs.readFileSync(sourceIndexPath, 'utf8');
         fs.writeFileSync(path.join(baseDir, '_index.md'), indexContent);
@@ -31,7 +31,7 @@ if (!fs.existsSync(baseDir)) {
 
 async function getClassDetails(classShortcode, apiKey, retries = 10) {
     // Prevent unnecessary fetching of class details for classes that are known to not exist
-    const skipShortcodes = ['TODO', 'strongaya'];
+    const skipShortcodes = ['TODO', 'beach'];
     if (skipShortcodes.some(code => classShortcode.includes(code))) {
         return {
             definition: 'No definition available',
@@ -89,7 +89,7 @@ Object.keys(variableInfo).forEach(async (variable) => {
 
     // Fetch the class details
     const classDetails = await getClassDetails(variableData.class, apiKey);
-    content += `The concept we in STRONG AYA refer to as "_${variable}_" is identifiable through shortcode *${variableData.class}*.  \n`;
+    content += `The concept we in BEACH refer to as "_${variable}_" is identifiable through shortcode *${variableData.class}*.  \n`;
 
     if (classDetails.preferredName === 'No preferred name available' && classDetails.definition === 'No definition available') {
         content += `This shortcode is custom and does not appear in standard vocabularies.\n\n`;
@@ -103,10 +103,10 @@ Object.keys(variableInfo).forEach(async (variable) => {
         const valueMapping = variableData.valueMapping.terms;
         const terms = Object.keys(valueMapping);
         const formattedTerms = terms.length > 1 ? terms.slice(0, -1).map(term => `"_${term}_"`).join(', ') + ' and ' + `"_${terms.slice(-1)}_"` : `"_${terms[0]}_"`;
-        content += `In STRONG AYA, this concept is recorded as ${formattedTerms}.\n\n`;
+        content += `In BEACH, this concept is recorded as ${formattedTerms}.\n\n`;
         for (const term in valueMapping) {
             const termDetails = await getClassDetails(valueMapping[term].targetClass, apiKey);
-            content += `The value we in STRONG AYA refer to as "_${term.charAt(0) + term.slice(1)}_" `;
+            content += `The value we in BEACH refer to as "_${term.charAt(0) + term.slice(1)}_" `;
             content += `is identifiable through shortcode *${valueMapping[term].targetClass}*.  \n`;
             if (termDetails.preferredName === 'No preferred name available' && termDetails.definition === 'No definition available') {
                 content += `This shortcode is custom and does not appear in standard vocabularies.\n\n`;
@@ -130,7 +130,7 @@ Object.keys(variableInfo).forEach(async (variable) => {
         if (uppercaseFolders.some(str => dirName.includes(str))) {
             dirName = dirName.toUpperCase();
         }
-        const classDir = path.join(__dirname, 'content', 'AYA-cancer-data-semantic-map', 'Semantic Mapping', ...classLabels.slice(0, index).concat(dirName));
+        const classDir = path.join(__dirname, 'content', 'BEACH-20K-NSCLC-data-semantic-map', 'Semantic Mapping', ...classLabels.slice(0, index).concat(dirName));
 
         // Create the directory if it does not exist
         if (!fs.existsSync(classDir)) {
@@ -140,7 +140,7 @@ Object.keys(variableInfo).forEach(async (variable) => {
         // Fetch the class details
         const classDetails = await getClassDetails(classNode.class, apiKey);
 
-        let indexContent = `---\nbookCollapseSection: true\nweight: 20\n---\n# ${label}\n The concept we in STRONG AYA refer to as "_${label}_" is identifiable through shortcode *${classNode.class}*.  \n`;
+        let indexContent = `---\nbookCollapseSection: true\nweight: 20\n---\n# ${label}\n The concept we in BEACH refer to as "_${label}_" is identifiable through shortcode *${classNode.class}*.  \n`;
         if (classDetails.preferredName === 'No preferred name available' && classDetails.definition === 'No definition available') {
             indexContent += `This shortcode is custom and does not appear in standard vocabularies.\n`;
         } else {
@@ -155,7 +155,7 @@ Object.keys(variableInfo).forEach(async (variable) => {
     await Promise.all(schemaReconstruction.map(async (reconstruction) => {
         if (reconstruction['@type'] === 'schema:UnitNode') {
             content += `## ${variable} unit\n\n`;
-            content += `In STRONG AYA, "_${variable}_" is recorded in "*${reconstruction.aestheticLabel}*" and this is associated with shortcode *${reconstruction.class}*.  \n`;
+            content += `In BEACH, "_${variable}_" is recorded in "*${reconstruction.aestheticLabel}*" and this is associated with shortcode *${reconstruction.class}*.  \n`;
 
             // Fetch the class details
             const nodeClassDetails = await getClassDetails(reconstruction.class, apiKey);
