@@ -168,10 +168,11 @@ Object.keys(variableInfo).forEach(async (variable) => {
         }
     }));
 
-    // Write the variable's info to a Markdown file in the last class directory
-    if (classDirs.length > 0) {
-        const lastClassDir = classDirs[classDirs.length - 1];
-        const variableFilePath = path.join(lastClassDir, `${variable}.md`);
-        fs.writeFileSync(variableFilePath, content);
-    }
+    // Write the variable's info to a Markdown file
+    // If there are class directories, use the last one; otherwise, use the base semantic mapping directory
+    const outputDir = classDirs.length > 0
+        ? classDirs[classDirs.length - 1]
+        : baseDir;
+    const variableFilePath = path.join(outputDir, `${variable}.md`);
+    fs.writeFileSync(variableFilePath, content);
 });
