@@ -34,62 +34,14 @@
         "@type": "schema:IdentifierVariable",
         "dataType": "identifier",
         "predicate": "sio:SIO_000008",
-        "class": "ncit:C25364",
-        "schemaReconstruction": [
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "sio:SIO_000235",
-            "class": "mesh:C18772",
-            "classLabel": "personClass",
-            "aestheticLabel": "Person"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "roo:P100029",
-            "class": "ncit:C3262",
-            "classLabel": "conditionClass",
-            "aestheticLabel": "Condition"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "placement": "after",
-            "predicate": "sio:SIO_000253",
-            "class": "ncit:C142529",
-            "classLabel": "observationClass",
-            "aestheticLabel": "Observation"
-          }
-        ]
+        "class": "ncit:C25364"
       },
       "disease": {
         "@id": "schema:variable/Disease",
         "@type": "schema:CategoricalVariable",
         "dataType": "categorical",
         "predicate": "sio:SIO_000008",
-        "class": "ncit:C2926",
-        "schemaReconstruction": [
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "sio:SIO_000235",
-            "class": "mesh:C18772",
-            "classLabel": "personClass",
-            "aestheticLabel": "Person"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "roo:P100029",
-            "class": "ncit:C3262",
-            "classLabel": "conditionClass",
-            "aestheticLabel": "Condition"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "placement": "after",
-            "predicate": "sio:SIO_000253",
-            "class": "ncit:C142529",
-            "classLabel": "observationClass",
-            "aestheticLabel": "Observation"
-          }
-        ]
+        "class": "ncit:C2926"
       },
       "t": {
         "@id": "schema:variable/t",
@@ -97,30 +49,6 @@
         "dataType": "categorical",
         "predicate": "sio:SIO_000008",
         "class": "ncit:C48885",
-        "schemaReconstruction": [
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "sio:SIO_000235",
-            "class": "mesh:C18772",
-            "classLabel": "personClass",
-            "aestheticLabel": "Person"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "roo:P100029",
-            "class": "ncit:C3262",
-            "classLabel": "conditionClass",
-            "aestheticLabel": "Condition"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "placement": "after",
-            "predicate": "sio:SIO_000253",
-            "class": "ncit:C142529",
-            "classLabel": "observationClass",
-            "aestheticLabel": "Observation"
-          }
-        ],
         "valueMapping": {
           "terms": {
             "Tx": { "targetClass": "ncit:C48737" },
@@ -146,30 +74,6 @@
         "dataType": "categorical",
         "predicate": "sio:SIO_000008",
         "class": "ncit:C48884",
-        "schemaReconstruction": [
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "sio:SIO_000235",
-            "class": "mesh:C18772",
-            "classLabel": "personClass",
-            "aestheticLabel": "Person"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "roo:P100029",
-            "class": "ncit:C3262",
-            "classLabel": "conditionClass",
-            "aestheticLabel": "Condition"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "placement": "after",
-            "predicate": "sio:SIO_000253",
-            "class": "ncit:C142529",
-            "classLabel": "observationClass",
-            "aestheticLabel": "Observation"
-          }
-        ],
         "valueMapping": {
           "terms": {
             "Nx": { "targetClass": "ncit:C48718" },
@@ -187,30 +91,6 @@
         "dataType": "categorical",
         "predicate": "sio:SIO_000008",
         "class": "ncit:C48883",
-        "schemaReconstruction": [
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "sio:SIO_000235",
-            "class": "mesh:C18772",
-            "classLabel": "personClass",
-            "aestheticLabel": "Person"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "roo:P100029",
-            "class": "ncit:C3262",
-            "classLabel": "conditionClass",
-            "aestheticLabel": "Condition"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "placement": "after",
-            "predicate": "sio:SIO_000253",
-            "class": "ncit:C142529",
-            "classLabel": "observationClass",
-            "aestheticLabel": "Observation"
-          }
-        ],
         "valueMapping": {
           "terms": {
             "Mx": { "targetClass": "ncit:C48704" },
@@ -229,30 +109,6 @@
         "dataType": "categorical",
         "predicate": "sio:SIO_000008",
         "class": "ncit:C28108",
-        "schemaReconstruction": [
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "sio:SIO_000235",
-            "class": "mesh:C18772",
-            "classLabel": "personClass",
-            "aestheticLabel": "Person"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "roo:P100029",
-            "class": "ncit:C3262",
-            "classLabel": "conditionClass",
-            "aestheticLabel": "Condition"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "placement": "after",
-            "predicate": "sio:SIO_000253",
-            "class": "ncit:C142529",
-            "classLabel": "observationClass",
-            "aestheticLabel": "Observation"
-          }
-        ],
         "valueMapping": {
           "terms": {
             "0": { "targetClass": "ncit:C28051" },
@@ -282,76 +138,14 @@
         "@type": "schema:ContinuousVariable",
         "dataType": "continuous",
         "predicate": "sio:SIO_000008",
-        "class": "ncit:C25164",
-        "schemaReconstruction": [
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "sio:SIO_000235",
-            "class": "mesh:C18772",
-            "classLabel": "personClass",
-            "aestheticLabel": "Person"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "roo:P100029",
-            "class": "ncit:C3262",
-            "classLabel": "conditionClass",
-            "aestheticLabel": "Condition"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "placement": "after",
-            "predicate": "sio:SIO_000253",
-            "class": "ncit:C142529",
-            "classLabel": "observationClass",
-            "aestheticLabel": "Observation"
-          },
-          {
-            "@type": "schema:UnitNode",
-            "predicate": "sio:SIO_000221",
-            "class": "ncit:C25301",
-            "nodeLabel": "date",
-            "aestheticLabel": "Date"
-          }
-        ]
+        "class": "ncit:C25164"
       },
       "date_of_fu": {
         "@id": "schema:variable/date_of_fu",
         "@type": "schema:ContinuousVariable",
         "dataType": "continuous",
         "predicate": "sio:SIO_000008",
-        "class": "ncit:C25164",
-        "schemaReconstruction": [
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "sio:SIO_000235",
-            "class": "mesh:C18772",
-            "classLabel": "personClass",
-            "aestheticLabel": "Person"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "roo:P100029",
-            "class": "ncit:C3262",
-            "classLabel": "conditionClass",
-            "aestheticLabel": "Condition"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "placement": "after",
-            "predicate": "sio:SIO_000253",
-            "class": "ncit:C142529",
-            "classLabel": "observationClass",
-            "aestheticLabel": "Observation"
-          },
-          {
-            "@type": "schema:UnitNode",
-            "predicate": "sio:SIO_000221",
-            "class": "ncit:C25301",
-            "nodeLabel": "date",
-            "aestheticLabel": "Date"
-          }
-        ]
+        "class": "ncit:C25164"
       },
       "vital_status": {
         "@id": "schema:variable/vital_status",
@@ -359,30 +153,6 @@
         "dataType": "categorical",
         "predicate": "sio:SIO_000008",
         "class": "ncit:C25717",
-        "schemaReconstruction": [
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "sio:SIO_000235",
-            "class": "mesh:C18772",
-            "classLabel": "personClass",
-            "aestheticLabel": "Person"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "predicate": "roo:P100029",
-            "class": "ncit:C3262",
-            "classLabel": "conditionClass",
-            "aestheticLabel": "Condition"
-          },
-          {
-            "@type": "schema:ClassNode",
-            "placement": "after",
-            "predicate": "sio:SIO_000253",
-            "class": "ncit:C142529",
-            "classLabel": "observationClass",
-            "aestheticLabel": "Observation"
-          }
-        ],
         "valueMapping": {
           "terms": {
             "dead": { "targetClass": "ncit:C28554" },
